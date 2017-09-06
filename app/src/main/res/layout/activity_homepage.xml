@@ -1,16 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.android.betterbuild.HomePage">
 
     <Button
-        android:id="@+id/sign_out_button"
+        android:id="@+id/edit_workouts_button"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorWhite"
+        android:text="Edit Workouts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="onClick"
-        android:text="Sign out" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:layout_marginTop="30dp" />
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/view_workouts_button"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/colorWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_workouts_button"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClick"
+        android:text="View Workouts"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/start_workout_button"
+        android:background="@color/colorAccent"
+        android:textColor="@color/colorWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_workouts_button"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClick"
+        android:text="Start Workout"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/sign_out_button"
+        android:background="@color/colorAccentPastel"
+        android:textColor="@color/colorWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClick"
+        android:text="Sign out"
+        android:layout_marginBottom="30dp"/>
+
+</RelativeLayout>
