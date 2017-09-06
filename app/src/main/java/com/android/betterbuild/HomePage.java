@@ -16,6 +16,7 @@ public class HomePage extends AppCompatActivity {
 
     GoogleApiClient mGoogleApiClient;
 
+    /* Sets up the Google API Client for easy log ouot */
     @Override
     protected void onStart() {
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -41,6 +42,7 @@ public class HomePage extends AppCompatActivity {
         }
     }
 
+    /* Sign out of Firebase, Google, and go back to home page */
     private void signOut() {
         // Firebase sign out
         FirebaseAuth.getInstance().signOut();
@@ -53,5 +55,11 @@ public class HomePage extends AppCompatActivity {
                         finish();
                     }
                 });
+    }
+
+    /* Back shouldn't do anything, it should only go back if a user logs out. */
+    @Override
+    public void onBackPressed() {
+        // TODO: pop-up saying "are you sure you want to log out?"
     }
 }
