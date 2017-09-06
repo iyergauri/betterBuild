@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.Auth;
@@ -67,7 +68,13 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void updateUI(FirebaseUser currentUser) {
-        return;
+        if (currentUser != null) {
+            Log.d(TAG, currentUser.getDisplayName());
+            Intent i = new Intent(this, HomePage.class);
+            startActivity(i);
+        } else {
+            signIn();
+        }
     }
 
     @Override
