@@ -1,5 +1,6 @@
 package com.android.betterbuild;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -39,6 +40,9 @@ public class HomePage extends AppCompatActivity {
         int i = v.getId();
         if (i == R.id.sign_out_button) {
             signOut();
+        } else if (i == R.id.edit_workouts_button) {
+            Intent intent = new Intent(this, CreateWorkout.class);
+            startActivity(intent);
         }
     }
 
